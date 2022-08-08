@@ -4,7 +4,7 @@ export function FriendListItem({friend: {  avatar, name, isOnline }}) {
   return (
     <li>
       <span className={`status ${isOnline}`}></span>
-      <img src={avatar} alt="" width="48" />
+      <img src={avatar} alt={name} width="48" />
       <p>{name}</p>
     </li>
   );
