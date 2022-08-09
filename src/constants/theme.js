@@ -1,5 +1,7 @@
 export const theme = {
   colors: {
+    red: "#ff0000",
+    green: "#00ff7f",
     black: '#000',
     white: '#fff',
     gray: '#929292',
@@ -9,7 +11,7 @@ export const theme = {
     bgGray: '#dcdcdc',
     primary: '#07c',
     secondary: '#05a',
-    accent: '#609',
+    accent: '#00ffff',
     muted: '#f6f6f6',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],

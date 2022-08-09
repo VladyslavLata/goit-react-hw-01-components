@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
+import { Box } from 'components/Box/Box';
+import { Avatar,OnlineIndicator,Name } from './FriendListItem.styled';
 
-export function FriendListItem({friend: {  avatar, name, isOnline }}) {
+export function FriendListItem({friend: { id, avatar, name, isOnline }}) {
   return (
-    <li>
-      <span className={`status ${isOnline}`}></span>
-      <img src={avatar} alt={name} width="48" />
-      <p>{name}</p>
-    </li>
+    <Box as="li" display= "flex" alignItems="center" gridGap={4} bg="bgWhite"  p = {4} boxShadow= "0px 5px 16px 1px rgba(0, 0, 0, 0.46)"  key={id}>
+      <OnlineIndicator data={`${isOnline}`}></OnlineIndicator>
+      <Avatar src={avatar} alt={name} width="48" />
+      <Name>{name}</Name>
+    </Box>
   );
 }
 

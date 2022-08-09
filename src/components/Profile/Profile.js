@@ -1,17 +1,35 @@
 import PropTypes from 'prop-types';
 import { Box } from '../Box/Box';
-import { UserPhoto, UserName, UserInfo, StatsItem } from './Profile.steled';
+import { UserPhoto, UserName, UserInfo, StatsItem } from './Profile.styled';
 
-export function Profile({ userName, tag, location, avatar, stats: {followers, views, likes} }) {
+export function Profile({
+  userName,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+}) {
   return (
-    <Box width="280px" display = "inline-block" borderRadius ="md" overflow="hidden" boxShadow=" 0px 0px 37px 7px rgba(34, 60, 80, 0.2)" >
-      <Box py = {5} px ={4} textAlign = "center" bg="bgWhite">
-        <UserPhoto src={avatar} alt={userName} width = "100px" height = "100px" />
+    <Box
+      width="280px"
+      display="inline-block"
+      borderRadius="md"
+      overflow="hidden"
+      boxShadow=" 0px 0px 37px 7px rgba(34, 60, 80, 0.2)"
+    >
+      <Box py={5} px={4} textAlign="center" bg="bgWhite">
+        <UserPhoto src={avatar} alt={userName} width="100px" height="100px" />
         <UserName>{userName}</UserName>
         <UserInfo>{`@${tag}`}</UserInfo>
         <UserInfo>{location}</UserInfo>
       </Box>
-      <Box display = "flex"   bg="bgGray" borderTop = "normal" borderTopColor = "gray" as = "ul">
+      <Box
+        display="flex"
+        bg="bgGray"
+        borderTop="normal"
+        borderTopColor="gray"
+        as="ul"
+      >
         <StatsItem>
           <span>Followers</span>
           <span>{followers}</span>
@@ -38,5 +56,5 @@ Profile.propTypes = {
     followers: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,
-  }).isRequired
-}
+  }).isRequired,
+};

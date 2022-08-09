@@ -9,6 +9,7 @@ import {
   shadow,
   space,
   typography,
+  grid,
 } from 'styled-system';
 
 export const Box = styled.div`
@@ -21,4 +22,5 @@ export const Box = styled.div`
   ${border}
   ${position}
   ${shadow}
+  ${grid}
 `;
